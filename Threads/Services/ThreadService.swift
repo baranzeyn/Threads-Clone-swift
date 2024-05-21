@@ -33,7 +33,7 @@ struct ThreadService{
             .getDocuments()
         
         let threads = snapshot.documents.compactMap({try? $0.data(as: Thread.self)})
-        return threads.sorted(by: <#T##(Thread, Thread) throws -> Bool#>)
+        return threads.sorted(by: {$0.timestamp.dateValue() > $1.timestamp.dateValue()})
         
     }
     
