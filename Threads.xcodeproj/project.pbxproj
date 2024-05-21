@@ -21,6 +21,7 @@
 		44483CB42BF3B10200427695 /* CreateThreadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44483CB32BF3B10200427695 /* CreateThreadView.swift */; };
 		44483CB82BF3B18900427695 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44483CB72BF3B18900427695 /* ActivityView.swift */; };
 		44483CBC2BF3B1D100427695 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44483CBB2BF3B1D100427695 /* ProfileView.swift */; };
+		444A52E72BFCCEA9009A5740 /* ActivityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444A52E62BFCCEA9009A5740 /* ActivityViewModel.swift */; };
 		449736482BF9068A007FE5CF /* CurrentUserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449736472BF9068A007FE5CF /* CurrentUserProfileViewModel.swift */; };
 		4497364B2BF9164C007FE5CF /* ExploreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4497364A2BF9164C007FE5CF /* ExploreViewModel.swift */; };
 		4497364D2BF9FAD1007FE5CF /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4497364C2BF9FAD1007FE5CF /* PreviewProvider.swift */; };
@@ -69,7 +70,8 @@
 		44483CB32BF3B10200427695 /* CreateThreadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateThreadView.swift; sourceTree = "<group>"; };
 		44483CB72BF3B18900427695 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		44483CBB2BF3B1D100427695 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		4483F5BA2BFC851900CE7AE5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		444A52E42BFCCCC9009A5740 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		444A52E62BFCCEA9009A5740 /* ActivityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewModel.swift; sourceTree = "<group>"; };
 		449736472BF9068A007FE5CF /* CurrentUserProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserProfileViewModel.swift; sourceTree = "<group>"; };
 		4497364A2BF9164C007FE5CF /* ExploreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewModel.swift; sourceTree = "<group>"; };
 		4497364C2BF9FAD1007FE5CF /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 		44483CB52BF3B14E00427695 /* Activity */ = {
 			isa = PBXGroup;
 			children = (
+				444A52E52BFCCE98009A5740 /* ViewModel */,
 				44483CB62BF3B15400427695 /* View */,
 			);
 			path = Activity;
@@ -252,6 +255,14 @@
 				44483CBB2BF3B1D100427695 /* ProfileView.swift */,
 			);
 			path = UserProfile;
+			sourceTree = "<group>";
+		};
+		444A52E52BFCCE98009A5740 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				444A52E62BFCCEA9009A5740 /* ActivityViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		449736492BF91609007FE5CF /* ViewModel */ = {
@@ -323,6 +334,7 @@
 		449872A22BF36B7B0008AEC4 /* Threads */ = {
 			isa = PBXGroup;
 			children = (
+				444A52E42BFCCCC9009A5740 /* Info.plist */,
 				449872B52BF36D7D0008AEC4 /* App */,
 				449872B42BF36D7A0008AEC4 /* Core */,
 				449872B32BF36D660008AEC4 /* Extensions */,
@@ -330,7 +342,6 @@
 				449872B12BF36D600008AEC4 /* Services */,
 				449872B62BF36DC30008AEC4 /* Utils */,
 				44FC825A2BF73D1A0099DD74 /* GoogleService-Info.plist */,
-				4483F5BA2BFC851900CE7AE5 /* GoogleService-Info.plist */,
 				449872A72BF36B7C0008AEC4 /* Assets.xcassets */,
 				449872A92BF36B7C0008AEC4 /* Preview Content */,
 			);
@@ -610,6 +621,7 @@
 				4434D8232BF5E5750067327A /* UserCell.swift in Sources */,
 				44FC82682BF744450099DD74 /* RegistrationViewModel.swift in Sources */,
 				449872A62BF36B7B0008AEC4 /* ContentView.swift in Sources */,
+				444A52E72BFCCEA9009A5740 /* ActivityViewModel.swift in Sources */,
 				44483CA32BF3A67C00427695 /* ThreadsTextFieldModifiers.swift in Sources */,
 				449872A42BF36B7B0008AEC4 /* ThreadsApp.swift in Sources */,
 				4497364B2BF9164C007FE5CF /* ExploreViewModel.swift in Sources */,
@@ -753,6 +765,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Threads/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Threads/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "\"Uygulama kullanılırken konumunuza erişim izni gerekmektedir\"";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -781,6 +795,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Threads/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Threads/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "\"Uygulama kullanılırken konumunuza erişim izni gerekmektedir\"";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
